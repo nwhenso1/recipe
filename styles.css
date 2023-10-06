@@ -1,0 +1,618 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* COLOR Settings
+Night:                    #0D0D0D
+White Smoke:              #F2F2F2
+Tiffany Blue:             #7ABFBF
+Tiffany Blue (50% Alpha): rgba(122, 191, 191, .5)
+Flame:                    #EB5428
+ */
+
+ /* BASIC Settings */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+ html {
+  background-color: rgba(122, 191, 191, .5);
+}
+body {
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  max-width: 414px;
+  display: grid;
+  margin: auto;
+  grid-template-areas: 
+  "header"
+  "details"
+  "ingredients"
+  "directions"
+  "aside"
+  "footer";
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 2vh 0 2vh 8vw;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+body h2, body h3 {
+  padding: 2vh 0 2vh 0;
+  text-align: center;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  line-height: 1.5;
+  margin: 0 2vw 0 4vw;
+}
+
+p, dd, li, nav, input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+dt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a, nav span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: #0D0D0D;
+}
+
+menu li {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+}
+
+main {
+  max-width: 414px;
+}
+
+.reviewcard figure dl dd {
+  visibility: hidden;
+}
+
+aside {
+  max-width: 414px;
+  background: #7ABFBF;
+}
+
+.sides {
+  max-width: 414px;
+}
+
+aside figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewcard {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* top: 5vh; */
+}
+
+.reviewcard figure {
+  width: 200px;
+}
+
+.reviewcard figure img {
+
+  position: relative;
+  width: 50%;
+}
+
+.reviewcard h3 {
+  position: relative;
+  display: inline;
+  margin: 10vh 0 2vh 0;
+}
+
+#social ul {
+  position: relative;
+  max-width: 414px;
+}
+
+#social li {
+  font-size: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+header a {
+  display: block;
+  width: 50px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+header ul li {
+  text-align: center;
+}
+
+header nav ul li button {
+  background-color: #EB5428;
+  border: none;
+  cursor: pointer;
+}
+
+#topcenter {
+  width: 200px;
+  background-color: #EB5428;
+}
+
+#topcenter a span {
+  visibility: hidden;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+menu ul {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  max-width: 414px;
+}
+
+menu ul li {
+  text-align: center;
+  max-width: 75px;
+}
+
+menu ul li a {
+  text-decoration: none;
+  color: #EB5428;
+}
+
+main p, main ol li {
+  line-height: 1.5;
+  margin: 2vh 2vw;
+}
+
+#recipecard ul {
+  margin: 0 0 0 2vw;
+  line-height: 1.5;
+  list-style: inside;
+}
+
+footer {
+  max-width: 414px;
+  font-size: 20px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li a {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  color: #EB5428;
+  text-decoration: none;
+  margin: 0 2vw 0 2vw;
+}
+
+footer h2 {
+  visibility: hidden;
+}
+
+footer h3 {
+  visibility: hidden;
+}
+
+footer img {
+  width: 50%;
+  margin: 0 0 10vh 20vw;
+
+}
+
+footer p {
+  text-align: center;
+  position: relative;
+  top: 72vh;
+}
+
+.bigdisplay {
+  visibility: hidden;
+}
+
+body figure img {
+  max-width: 414px;
+}
+
+.sub-menu ul {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.sub-menu~label {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  user-select: none;
+}
+
+.sub-menu~label span {
+  display: block;
+  background-color: black;
+  height: 2px;
+  position: relative;
+  transition: background-color .2s ease-out;
+  width: 20px;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ ul {
+  max-height: 500px;
+}
+
+input:checked ~ label span {
+  background: transparent;
+}
+
+input:checked ~ label span:before {
+  transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+
+  menu ul {
+    position: relative;
+    top: 29vh;
+    max-width: 768px;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 2vh 0;
+  }
+
+  body figure img {
+    max-width: 768px;
+  }
+
+  .smalldisplay {
+    visibility: hidden;
+  }
+
+  .bigdisplay {
+    visibility: visible;
+  }
+
+  .sub-menu {
+    width: 768px;
+  }
+
+  .sub-menu ul {
+    overflow: visible;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 30vh;
+  }
+
+  .sub-menu nav span {
+    color:#EB5428;
+  }
+
+  .sub-menu ul li a {
+    text-align: center;
+  }
+
+  .sub-menu ul li a img {
+    padding: 0 0 0 4px;
+    max-height: 50px;
+
+  }
+
+  body h1 {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 25vh;
+  }
+
+  header nav {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .textcollapse {
+    text-align: center;
+    color:#EB5428
+  }
+
+  main {
+    max-width: 768px;
+  }
+
+  aside {
+    max-width: 768px;
+  }
+
+  .sides {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: 768px;
+    height: 550px;
+  }
+
+  footer {
+    max-width: 768px;
+    height: 300px;
+  }
+
+  footer ul {
+    position: relative;
+    top: -20vh;
+    justify-content: flex-end;
+  }
+
+  footer img {
+    position: relative;
+    top: -200px;
+    left: -200px;
+    width: 25%;
+  }
+
+  footer p {
+    text-align: start;
+    top: 30px;
+    left: 40px;
+  }
+
+  #sidebyside .ingredients {
+    position: relative;
+    left: 120px;
+  }
+
+  #sidebyside {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+
+  #sidebyside h2 {
+    position: relative;
+    left: 15vw;
+  }
+
+  #sidebyside ul, #sidebyside ol {
+    position: relative;
+    top: 30px;
+    left: -10vh;
+    height: 450px;
+  }
+
+  #recipecard dl {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    max-width: 1280px;
+    height: 2600px;
+  }
+
+  main {
+    max-width: 1280px;
+  }
+
+  menu ul {
+    position: relative;
+    top: 29vh;
+    max-width: 1280px;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 2vh 0;
+  }
+
+  body figure img {
+    max-width: 1280px;
+  }
+
+  body h1 {
+    position: relative;
+    top: -2px;
+  }
+
+  #topleft {
+    visibility: hidden;
+  }
+
+  #topcenter {
+    width: 75px;
+    position:relative;
+    left: -140px;
+  }
+
+  .sub-menu {
+    position: relative;
+    top: -240px;
+    left: -220px;
+  }
+
+  menu ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    border: 1px solid #EB5428;
+    max-width: 80px;
+    height: 940px;
+  }
+
+  .photo img {
+    position: relative;
+    top: -830px;
+    left: 83px;
+    width: 50%;
+  }
+
+  main section p {
+    position: relative;
+    line-height: 2;
+    width: 535px;
+    top: -1790px;
+    left: 700px;
+  }
+
+  #borderdetails {
+    position: relative;
+    height: 100px;
+    top: -1180px;
+    color: #7ABFBF;
+    background-color: #0D0D0D;
+    text-align: center;
+  }
+
+  #borderdetails dl {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  #borderdetails dd {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  #borderdetails dd {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+  }
+
+  #sidebyside {
+    position: relative;
+    top: -1180px;
+  }
+
+  aside {
+    max-width: 1280px;
+    position: relative;
+    top: -1180px;
+  }
+
+  .sides {
+    max-width: 1280px;
+    grid-template-columns: repeat(4, 1fr);
+    height: 350px;
+  }
+
+  footer {
+    max-width: 1280px;
+    position: relative;
+    top: -1140px;
+  }
+
+  footer img {
+    position: relative;
+    top: -300px;
+    left: -300px;
+    width: 25%;
+  }
+
+  footer p {
+    text-align: start;
+    top: -200px;
+    left: 370px;
+  }
+}
